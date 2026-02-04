@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { createFileRoute } from '@tanstack/react-router'
 import { Checkbox } from "@/components/ui/checkbox"
 import { Tilt } from 'components/motion-primitives/tilt';
+import { Label } from '@/components/ui/label';
 // import {
 //   Zap,
 //   Server,
@@ -20,6 +21,10 @@ function App() {
       <Button>Click me</Button>
       <Checkbox />
       <TiltCard1 />
+      <div className="flex gap-2">
+        <Checkbox id="terms" />
+        <Label htmlFor="terms">Accept terms and conditions</Label>
+      </div>
     </div>
   );
 }
