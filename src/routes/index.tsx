@@ -3,6 +3,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Checkbox } from "@/components/ui/checkbox"
 import { Tilt } from 'components/motion-primitives/tilt';
 import { Label } from '@/components/ui/label';
+import { Field, FieldContent, FieldLabel, FieldTitle } from '@/components/ui/field';
 // import {
 //   Zap,
 //   Server,
@@ -50,6 +51,14 @@ export function TiltCard1() {
           </h1>
           <p className='text-zinc-700 dark:text-zinc-400'>Kôkaku kidôtai</p>
         </div>
+        <FieldLabel>
+          <Field orientation="horizontal">
+            <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+            <FieldContent>
+              <FieldTitle>Enable notifications</FieldTitle>
+            </FieldContent>
+          </Field>
+        </FieldLabel>
       </div>
     </Tilt>
   );
