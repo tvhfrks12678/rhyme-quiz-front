@@ -1,9 +1,9 @@
-
+import { ComicText } from "@/components/ui/comic-text"
 
 export default function RhymeQuizHeader() {
   return (
-    <div>
-      <h1>Rhyme Quiz</h1>
-    </div>
+
+    <ComicText>Comic Text</ComicText>
+
   );
 }
