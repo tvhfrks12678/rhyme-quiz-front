@@ -1,9 +1,11 @@
 import { ComicText } from "@/components/ui/comic-text"
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 
 export default function RhymeQuizHeader() {
   return (
-
-    <ComicText>Comic Text</ComicText>
-
+    <div>
+      <ComicText>Rhyme Quiz</ComicText>
+      <AnimatedThemeToggler />
+    </div>
   );
 }
