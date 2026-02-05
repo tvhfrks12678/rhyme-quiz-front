@@ -2,9 +2,10 @@ import { Button } from '@/components/ui/button';
 import { createFileRoute } from '@tanstack/react-router'
 import { Checkbox } from "@/components/ui/checkbox"
 // import { Label } from '@/components/ui/label';
-import { Field, FieldContent, FieldLabel, FieldTitle } from '@/components/ui/field';
+import { Field, FieldContent, FieldDescription, FieldLabel, FieldTitle } from '@/components/ui/field';
 import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 // import {
 //   Zap,
@@ -53,6 +54,9 @@ export function CardImage() {
             </FieldContent>
           </Field>
         </FieldLabel>
+        <br></br>
+
+        <RadioGroupChoiceCard />
 
       </CardHeader>
       <CardFooter>
@@ -61,6 +65,48 @@ export function CardImage() {
     </Card>
   )
 }
+
+
+export function RadioGroupChoiceCard() {
+  return (
+    <RadioGroup defaultValue="plus" className="max-w-sm">
+      <FieldLabel htmlFor="plus-plan">
+        <Field orientation="horizontal">
+          <FieldContent>
+            <FieldTitle>Plus</FieldTitle>
+            <FieldDescription>
+              For individuals and small teams.
+            </FieldDescription>
+          </FieldContent>
+          <RadioGroupItem value="plus" id="plus-plan" />
+        </Field>
+      </FieldLabel>
+      <FieldLabel htmlFor="pro-plan">
+        <Field orientation="horizontal">
+          <FieldContent>
+            <FieldTitle>Pro</FieldTitle>
+            <FieldDescription>For growing businesses.</FieldDescription>
+          </FieldContent>
+          <RadioGroupItem value="pro" id="pro-plan" />
+        </Field>
+      </FieldLabel>
+      <FieldLabel htmlFor="enterprise-plan">
+        <Field orientation="horizontal">
+          <FieldContent>
+            <FieldTitle>Enterprise</FieldTitle>
+            <FieldDescription>
+              For large teams and enterprises.
+            </FieldDescription>
+          </FieldContent>
+          <RadioGroupItem value="enterprise" id="enterprise-plan" />
+        </Field>
+      </FieldLabel>
+    </RadioGroup>
+  )
+}
+
+
+
 
 // function App() {
 //   const features = [
