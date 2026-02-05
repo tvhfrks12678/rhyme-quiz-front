@@ -1,8 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { createFileRoute } from '@tanstack/react-router'
 import { Checkbox } from "@/components/ui/checkbox"
-import { Tilt } from 'components/motion-primitives/tilt';
-import { Label } from '@/components/ui/label';
+// import { Label } from '@/components/ui/label';
 import { Field, FieldContent, FieldLabel, FieldTitle } from '@/components/ui/field';
 import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -22,14 +21,6 @@ export const Route = createFileRoute('/')({ component: App })
 function App() {
   return (
     <div>
-      {/* <Button>Click me</Button>
-      <Checkbox />
-      <TiltCard1 />
-      <div className="flex gap-2">
-        <Checkbox id="terms" />
-        <Label htmlFor="terms">Accept terms and conditions</Label>
-      </div> */}
-      <br></br>
       <CardImage />
     </div>
   );
@@ -53,35 +44,7 @@ export function CardImage() {
           A practical talk on component APIs, accessibility, and shipping
           faster.
         </CardDescription>
-      </CardHeader>
-      <CardFooter>
-        <Button className="w-full">View Event</Button>
-      </CardFooter>
-    </Card>
-  )
-}
 
-
-export function TiltCard1() {
-  return (
-    <Tilt rotationFactor={8} isRevese>
-      <div
-        style={{
-          borderRadius: '12px',
-        }}
-        className='flex max-w-[270px] flex-col overflow-hidden border border-zinc-950/10 bg-white dark:border-zinc-50/10 dark:bg-zinc-900'
-      >
-        <img
-          src='https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg'
-          alt='Ghost in the shell - Kôkaku kidôtai'
-          className='h-48 w-full object-cover'
-        />
-        <div className='p-2'>
-          <h1 className='font-mono leading-snug text-zinc-950 dark:text-zinc-50'>
-            Ghost in the Shell
-          </h1>
-          <p className='text-zinc-700 dark:text-zinc-400'>Kôkaku kidôtai</p>
-        </div>
         <FieldLabel>
           <Field orientation="horizontal">
             <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
@@ -90,13 +53,14 @@ export function TiltCard1() {
             </FieldContent>
           </Field>
         </FieldLabel>
-      </div>
-    </Tilt>
-  );
+
+      </CardHeader>
+      <CardFooter>
+        <Button className="w-full">View Event</Button>
+      </CardFooter>
+    </Card>
+  )
 }
-
-
-
 
 // function App() {
 //   const features = [
