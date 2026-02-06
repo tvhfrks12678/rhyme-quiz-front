@@ -3,9 +3,18 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Checkbox } from "@/components/ui/checkbox"
 // import { Label } from '@/components/ui/label';
 import { Field, FieldContent, FieldDescription, FieldLabel, FieldTitle } from '@/components/ui/field';
-import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card-shadcn';
+// import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card-shadcn';
 import { Badge } from '@/components/ui/badge';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
 
 // import {
 //   Zap,
@@ -22,11 +31,69 @@ export const Route = createFileRoute('/')({ component: App })
 function App() {
   return (
     <div>
+      {/* <CardImage /> */}
+      <CardWithImage />
+      <QuizQuestionCard />
       <QuizQuestion />
-      <CardImage />
     </div>
   );
 }
+
+export function QuizQuestionCard() {
+  return (
+    <div>
+      <Card className="w-full max-w-xs overflow-hidden pt-0">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVNXsNAi5adG8cBxNtFCYy6LJiCLnjrbdS9sezxOGr_jYVMLvsrLKGMtDD80BqUi_P0z-0h4xdEYowtxV36nQQsx0iJ8Z5C8FwZTETVWHeRapAlQUzIX_L5hhxDYkKfX6VzkDeeNbBYhX3tir_GQgIrEWbVwdf5Pv80Tlapw-mYTNYSUY-RrPjP0Pwu19x/s771/eto_centaur_hagoita.png"
+          alt="UI/UX Review"
+          className="h-48 w-full object-cover"
+        />
+        <CardHeader>
+          <CardTitle>UI/UX Review Check</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground text-sm">
+            The place is close to Barceloneta Beach and bus stop just 2 min by
+            walk and near to "Naviglio" where you can enjoy the main night life in
+            Barcelona.
+          </p>
+        </CardContent>
+        <CardFooter>
+          <Button>Read More</Button>
+        </CardFooter>
+      </Card>
+      <br></br>
+    </div>
+  )
+}
+
+
+export function CardWithImage() {
+  return (
+    <Card className="w-full max-w-xs overflow-hidden pt-0">
+      <img
+        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/creative-ai/bg-2.jpg"
+        alt="UI/UX Review"
+        className="h-48 w-full object-cover"
+      />
+      <CardHeader>
+        <CardTitle>UI/UX Review Check</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="text-muted-foreground text-sm">
+          The place is close to Barceloneta Beach and bus stop just 2 min by
+          walk and near to "Naviglio" where you can enjoy the main night life in
+          Barcelona.
+        </p>
+      </CardContent>
+      <CardFooter>
+        <Button>Read More</Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
+
 
 function QuizQuestion() {
   return (
@@ -39,26 +106,10 @@ function QuizQuestion() {
           className="relative z-20 aspect-video w-full object-cover brightness-60"
         />
         <CardHeader>
-          {/* <CardAction>
-            <Badge variant="secondary">Featured</Badge>
-          </CardAction> */}
           <CardTitle>ケンタウロスで韻を踏んでいるのは？</CardTitle>
-          {/* <CardDescription>
-            A practical talk on component APIs, accessibility, and shipping
-            faster.
-          </CardDescription> */}
-
-          {/* <FieldLabel>
-            <Field orientation="horizontal">
-              <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
-              <FieldContent>
-                <FieldTitle>Enable notifications</FieldTitle>
-              </FieldContent>
-            </Field>
-          </FieldLabel> */}
           <br></br>
 
-          <QuizQuestionCard />
+          <QuizQuestionChoice />
 
         </CardHeader>
         <CardFooter>
@@ -73,7 +124,7 @@ function QuizQuestion() {
 
 
 
-export function QuizQuestionCard() {
+export function QuizQuestionChoice() {
   return (
     <RadioGroup defaultValue="plus" className="max-w-sm">
       <FieldLabel htmlFor="plus-plan">
@@ -109,44 +160,44 @@ export function QuizQuestionCard() {
 
 
 
-export function CardImage() {
-  return (
-    <Card className="relative mx-auto w-full max-w-lg pt-0">
-      <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-      <img
-        src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
-        alt="Event cover"
-        className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
-      />
-      <CardHeader>
-        <CardAction>
-          <Badge variant="secondary">Featured</Badge>
-        </CardAction>
-        <CardTitle>Design systems meetup</CardTitle>
-        <CardDescription>
-          A practical talk on component APIs, accessibility, and shipping
-          faster.
-        </CardDescription>
+// export function CardImage() {
+//   return (
+//     <Card className="relative mx-auto w-full max-w-lg pt-0">
+//       <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+//       <img
+//         src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
+//         alt="Event cover"
+//         className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+//       />
+//       <CardHeader>
+//         <CardAction>
+//           <Badge variant="secondary">Featured</Badge>
+//         </CardAction>
+//         <CardTitle>Design systems meetup</CardTitle>
+//         <CardDescription>
+//           A practical talk on component APIs, accessibility, and shipping
+//           faster.
+//         </CardDescription>
 
-        <FieldLabel>
-          <Field orientation="horizontal">
-            <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
-            <FieldContent>
-              <FieldTitle>Enable notifications</FieldTitle>
-            </FieldContent>
-          </Field>
-        </FieldLabel>
-        <br></br>
+//         <FieldLabel>
+//           <Field orientation="horizontal">
+//             <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+//             <FieldContent>
+//               <FieldTitle>Enable notifications</FieldTitle>
+//             </FieldContent>
+//           </Field>
+//         </FieldLabel>
+//         <br></br>
 
-        <RadioGroupChoiceCard />
+//         <RadioGroupChoiceCard />
 
-      </CardHeader>
-      <CardFooter>
-        <Button className="w-full">View Event</Button>
-      </CardFooter>
-    </Card>
-  )
-}
+//       </CardHeader>
+//       <CardFooter>
+//         <Button className="w-full">View Event</Button>
+//       </CardFooter>
+//     </Card>
+//   )
+// }
 
 
 export function RadioGroupChoiceCard() {
