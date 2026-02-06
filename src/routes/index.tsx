@@ -3,7 +3,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { Checkbox } from "@/components/ui/checkbox"
 // import { Label } from '@/components/ui/label';
 import { Field, FieldContent, FieldDescription, FieldLabel, FieldTitle } from '@/components/ui/field';
-import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card-shadcn';
 import { Badge } from '@/components/ui/badge';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
