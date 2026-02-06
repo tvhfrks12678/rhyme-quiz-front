@@ -22,14 +22,96 @@ export const Route = createFileRoute('/')({ component: App })
 function App() {
   return (
     <div>
+      <QuizQuestion />
       <CardImage />
     </div>
   );
 }
 
+function QuizQuestion() {
+  return (
+    <div>
+      <Card className="relative mx-auto w-full max-w-lg pt-0">
+        <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVNXsNAi5adG8cBxNtFCYy6LJiCLnjrbdS9sezxOGr_jYVMLvsrLKGMtDD80BqUi_P0z-0h4xdEYowtxV36nQQsx0iJ8Z5C8FwZTETVWHeRapAlQUzIX_L5hhxDYkKfX6VzkDeeNbBYhX3tir_GQgIrEWbVwdf5Pv80Tlapw-mYTNYSUY-RrPjP0Pwu19x/s771/eto_centaur_hagoita.png"
+          alt="Event cover"
+          className="relative z-20 aspect-video w-full object-cover brightness-60"
+        />
+        <CardHeader>
+          {/* <CardAction>
+            <Badge variant="secondary">Featured</Badge>
+          </CardAction> */}
+          <CardTitle>ケンタウロスで韻を踏んでいるのは？</CardTitle>
+          {/* <CardDescription>
+            A practical talk on component APIs, accessibility, and shipping
+            faster.
+          </CardDescription> */}
+
+          {/* <FieldLabel>
+            <Field orientation="horizontal">
+              <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+              <FieldContent>
+                <FieldTitle>Enable notifications</FieldTitle>
+              </FieldContent>
+            </Field>
+          </FieldLabel> */}
+          <br></br>
+
+          <QuizQuestionCard />
+
+        </CardHeader>
+        <CardFooter>
+          <Button className="w-full">解答</Button>
+        </CardFooter>
+      </Card>
+      <br></br>
+    </div>
+  )
+}
+
+
+
+
+export function QuizQuestionCard() {
+  return (
+    <RadioGroup defaultValue="plus" className="max-w-sm">
+      <FieldLabel htmlFor="plus-plan">
+        <Field orientation="horizontal">
+          <RadioGroupItem value="plus" id="plus-plan" />
+          <FieldContent>
+            <FieldTitle>天高く</FieldTitle>
+          </FieldContent>
+        </Field>
+      </FieldLabel>
+      <FieldLabel htmlFor="plus-plan1">
+        <Field orientation="horizontal">
+          <RadioGroupItem value="plus1" id="plus-plan1" />
+          <FieldContent>
+            <FieldTitle>明太子です</FieldTitle>
+          </FieldContent>
+        </Field>
+      </FieldLabel>
+      <FieldLabel htmlFor="pro-plan">
+        <Field orientation="horizontal">
+          <RadioGroupItem value="pro" id="pro-plan" />
+          <FieldContent>
+            <FieldDescription>変態です</FieldDescription>
+          </FieldContent>
+        </Field>
+      </FieldLabel>
+    </RadioGroup>
+  )
+}
+
+
+
+
+
+
 export function CardImage() {
   return (
-    <Card className="relative mx-auto w-full max-w-sm pt-0">
+    <Card className="relative mx-auto w-full max-w-lg pt-0">
       <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
       <img
         src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
