@@ -10,6 +10,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import {
   Card,
   CardContent,
+  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -32,40 +33,165 @@ function App() {
   return (
     <div>
       {/* <CardImage /> */}
-      <CardWithImage />
+      <CardDemo />
       <QuizQuestionCard />
+      <CardWithImage />
       <QuizQuestion />
     </div>
   );
 }
 
-export function QuizQuestionCard() {
+
+
+
+
+export function CardDemo() {
   return (
-    <div>
-      <Card className="w-full max-w-xs overflow-hidden pt-0">
-        <img
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVNXsNAi5adG8cBxNtFCYy6LJiCLnjrbdS9sezxOGr_jYVMLvsrLKGMtDD80BqUi_P0z-0h4xdEYowtxV36nQQsx0iJ8Z5C8FwZTETVWHeRapAlQUzIX_L5hhxDYkKfX6VzkDeeNbBYhX3tir_GQgIrEWbVwdf5Pv80Tlapw-mYTNYSUY-RrPjP0Pwu19x/s771/eto_centaur_hagoita.png"
-          alt="UI/UX Review"
-          className="h-48 w-full object-cover"
-        />
-        <CardHeader>
-          <CardTitle>UI/UX Review Check</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground text-sm">
-            The place is close to Barceloneta Beach and bus stop just 2 min by
-            walk and near to "Naviglio" where you can enjoy the main night life in
-            Barcelona.
-          </p>
+    <div className="grid w-full mx-auto max-w-md">
+      {/* Blog Card */}
+      <Card className="overflow-hidden pt-0">
+        <div className="aspect-video w-full">
+          <img
+            className="h-full w-full object-cover"
+            src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
+            alt="Blog 1"
+          />
+        </div>
+        <CardContent className="flex flex-col gap-2">
+          <div className="text-muted-foreground flex items-center gap-2 text-xs">
+            {/* <Calendar className="h-3 w-3" /> */}
+            <span>Mar 15, 2025</span>
+            <span>•</span>
+            <span>5 min read</span>
+          </div>
+          <CardTitle className="text-xl font-semibold">
+            ケンタウロスで韻を踏んでいるのは？
+          </CardTitle>
+          {/* <CardDescription className="line-clamp-2">
+            AI is changing the world and will continue to do so in the future.
+            Check Creative Tim UI for more information.
+          </CardDescription> */}
+          <QuizQuestionChoiceCheckbox />
         </CardContent>
         <CardFooter>
-          <Button>Read More</Button>
+          <Button variant="secondary" size="sm">
+            解答
+          </Button>
         </CardFooter>
       </Card>
       <br></br>
     </div>
   )
 }
+
+function QuizQuestionChoiceCheckbox() {
+  return (
+    <div className="flex flex-col gap-2">
+      <FieldLabel>
+        <Field orientation="horizontal">
+          <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+          <FieldContent>
+            <FieldTitle>天才でなく</FieldTitle>
+          </FieldContent>
+        </Field>
+      </FieldLabel>
+      <FieldLabel>
+        <Field orientation="horizontal">
+          <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+          <FieldContent>
+            <FieldTitle>けんけんぱです</FieldTitle>
+          </FieldContent>
+          </Field>
+      </FieldLabel>
+      <FieldLabel>
+        <Field orientation="horizontal">
+          <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+          <FieldContent>
+            <FieldTitle>三角です</FieldTitle>
+          </FieldContent>
+          </Field>
+      </FieldLabel>
+      <FieldLabel>
+        <Field orientation="horizontal">
+          <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+          <FieldContent>
+            <FieldTitle>ペーペーです</FieldTitle>
+          </FieldContent>
+          </Field>
+      </FieldLabel>
+    </div>
+  )
+}
+
+
+export function QuizQuestionChoice() {
+  return (
+    <RadioGroup defaultValue="plus" className="max-w-sm">
+      <FieldLabel htmlFor="plus-plan">
+        <Field orientation="horizontal">
+          <RadioGroupItem value="plus" id="plus-plan" />
+          <FieldContent>
+            <FieldTitle>天高く</FieldTitle>
+          </FieldContent>
+        </Field>
+      </FieldLabel>
+      <FieldLabel htmlFor="plus-plan1">
+        <Field orientation="horizontal">
+          <RadioGroupItem value="plus1" id="plus-plan1" />
+          <FieldContent>
+            <FieldTitle>明太子です</FieldTitle>
+          </FieldContent>
+        </Field>
+      </FieldLabel>
+      <FieldLabel htmlFor="plus-plan2">
+        <Field orientation="horizontal">
+          <RadioGroupItem value="plus2" id="plus-plan2" />
+          <FieldContent>
+            <FieldTitle>変態です</FieldTitle>
+          </FieldContent>
+        </Field>
+      </FieldLabel>
+      <FieldLabel htmlFor="plus-plan3">
+        <Field orientation="horizontal">
+          <RadioGroupItem value="plus3" id="plus-plan3" />
+          <FieldContent>
+            <FieldTitle>選択なく</FieldTitle>
+          </FieldContent>
+        </Field>
+      </FieldLabel>
+    </RadioGroup>
+  )
+}
+
+
+export function QuizQuestionCard() {
+  return (
+    <div className='mx-auto max-w-md pt-0'>
+      <Card className="w-full max-w-md overflow-hidden pt-0 ">
+        <img
+          src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
+          alt="UI/UX Review"
+          className="h-72 w-full object-cover"
+        />
+        <CardHeader>
+          <CardTitle>ケンタウロスで韻を踏んでいるのは？</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <QuizQuestionChoice />
+        </CardContent>
+        <CardFooter>
+          <Button>解答</Button>
+        </CardFooter>
+      </Card>
+      <br></br>
+    </div>
+  )
+}
+
+
+
+
+
 
 
 export function CardWithImage() {
@@ -120,43 +246,6 @@ function QuizQuestion() {
     </div>
   )
 }
-
-
-
-
-export function QuizQuestionChoice() {
-  return (
-    <RadioGroup defaultValue="plus" className="max-w-sm">
-      <FieldLabel htmlFor="plus-plan">
-        <Field orientation="horizontal">
-          <RadioGroupItem value="plus" id="plus-plan" />
-          <FieldContent>
-            <FieldTitle>天高く</FieldTitle>
-          </FieldContent>
-        </Field>
-      </FieldLabel>
-      <FieldLabel htmlFor="plus-plan1">
-        <Field orientation="horizontal">
-          <RadioGroupItem value="plus1" id="plus-plan1" />
-          <FieldContent>
-            <FieldTitle>明太子です</FieldTitle>
-          </FieldContent>
-        </Field>
-      </FieldLabel>
-      <FieldLabel htmlFor="pro-plan">
-        <Field orientation="horizontal">
-          <RadioGroupItem value="pro" id="pro-plan" />
-          <FieldContent>
-            <FieldDescription>変態です</FieldDescription>
-          </FieldContent>
-        </Field>
-      </FieldLabel>
-    </RadioGroup>
-  )
-}
-
-
-
 
 
 
