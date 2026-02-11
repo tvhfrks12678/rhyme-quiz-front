@@ -15,6 +15,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import QuizPage from '@/features/quiz/presentation/QuizPage';
 
 
 // import {
@@ -33,6 +34,7 @@ function App() {
   return (
     <div>
       {/* <CardImage /> */}
+      <QuizPage />
       <CardDemo />
       <QuizQuestionCard />
       <CardWithImage />
