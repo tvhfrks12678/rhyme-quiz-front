@@ -1,11 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { createFileRoute } from '@tanstack/react-router'
 import { Checkbox } from "@/components/ui/checkbox"
-// import { Label } from '@/components/ui/label';
 import { Field, FieldContent, FieldDescription, FieldLabel, FieldTitle } from '@/components/ui/field';
-// import { Card, CardAction, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card-shadcn';
-import { Badge } from '@/components/ui/badge';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 import {
   Card,
@@ -16,7 +12,6 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import QuizPage from '@/features/quiz/presentation/QuizPage';
-
 
 // import {
 //   Zap,
@@ -33,19 +28,11 @@ export const Route = createFileRoute('/')({ component: App })
 function App() {
   return (
     <div>
-      {/* <CardImage /> */}
       <QuizPage />
       <CardDemo />
-      <QuizQuestionCard />
-      <CardWithImage />
-      <QuizQuestion />
     </div>
   );
 }
-
-
-
-
 
 export function CardDemo() {
   return (
@@ -124,213 +111,6 @@ function QuizQuestionChoiceCheckbox() {
     </div>
   )
 }
-
-
-export function QuizQuestionChoice() {
-  return (
-    <RadioGroup defaultValue="plus" className="max-w-sm">
-      <FieldLabel htmlFor="plus-plan">
-        <Field orientation="horizontal">
-          <RadioGroupItem value="plus" id="plus-plan" />
-          <FieldContent>
-            <FieldTitle>天高く</FieldTitle>
-          </FieldContent>
-        </Field>
-      </FieldLabel>
-      <FieldLabel htmlFor="plus-plan1">
-        <Field orientation="horizontal">
-          <RadioGroupItem value="plus1" id="plus-plan1" />
-          <FieldContent>
-            <FieldTitle>明太子です</FieldTitle>
-          </FieldContent>
-        </Field>
-      </FieldLabel>
-      <FieldLabel htmlFor="plus-plan2">
-        <Field orientation="horizontal">
-          <RadioGroupItem value="plus2" id="plus-plan2" />
-          <FieldContent>
-            <FieldTitle>変態です</FieldTitle>
-          </FieldContent>
-        </Field>
-      </FieldLabel>
-      <FieldLabel htmlFor="plus-plan3">
-        <Field orientation="horizontal">
-          <RadioGroupItem value="plus3" id="plus-plan3" />
-          <FieldContent>
-            <FieldTitle>選択なく</FieldTitle>
-          </FieldContent>
-        </Field>
-      </FieldLabel>
-    </RadioGroup>
-  )
-}
-
-
-export function QuizQuestionCard() {
-  return (
-    <div className='mx-auto max-w-md pt-0'>
-      <Card className="w-full max-w-md overflow-hidden pt-0 ">
-        <img
-          src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
-          alt="UI/UX Review"
-          className="h-72 w-full object-cover"
-        />
-        <CardHeader>
-          <CardTitle>ケンタウロスで韻を踏んでいるのは？</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <QuizQuestionChoice />
-        </CardContent>
-        <CardFooter>
-          <Button>解答</Button>
-        </CardFooter>
-      </Card>
-      <br></br>
-    </div>
-  )
-}
-
-
-
-
-
-
-
-export function CardWithImage() {
-  return (
-    <Card className="w-full max-w-xs overflow-hidden pt-0">
-      <img
-        src="https://raw.githubusercontent.com/creativetimofficial/public-assets/refs/heads/master/creative-ai/bg-2.jpg"
-        alt="UI/UX Review"
-        className="h-48 w-full object-cover"
-      />
-      <CardHeader>
-        <CardTitle>UI/UX Review Check</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground text-sm">
-          The place is close to Barceloneta Beach and bus stop just 2 min by
-          walk and near to "Naviglio" where you can enjoy the main night life in
-          Barcelona.
-        </p>
-      </CardContent>
-      <CardFooter>
-        <Button>Read More</Button>
-      </CardFooter>
-    </Card>
-  )
-}
-
-
-
-function QuizQuestion() {
-  return (
-    <div>
-      <Card className="relative mx-auto w-full max-w-lg pt-0">
-        <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-        <img
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjVNXsNAi5adG8cBxNtFCYy6LJiCLnjrbdS9sezxOGr_jYVMLvsrLKGMtDD80BqUi_P0z-0h4xdEYowtxV36nQQsx0iJ8Z5C8FwZTETVWHeRapAlQUzIX_L5hhxDYkKfX6VzkDeeNbBYhX3tir_GQgIrEWbVwdf5Pv80Tlapw-mYTNYSUY-RrPjP0Pwu19x/s771/eto_centaur_hagoita.png"
-          alt="Event cover"
-          className="relative z-20 aspect-video w-full object-cover brightness-60"
-        />
-        <CardHeader>
-          <CardTitle>ケンタウロスで韻を踏んでいるのは？</CardTitle>
-          <br></br>
-
-          <QuizQuestionChoice />
-
-        </CardHeader>
-        <CardFooter>
-          <Button className="w-full">解答</Button>
-        </CardFooter>
-      </Card>
-      <br></br>
-    </div>
-  )
-}
-
-
-
-// export function CardImage() {
-//   return (
-//     <Card className="relative mx-auto w-full max-w-lg pt-0">
-//       <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-//       <img
-//         src="https://images.beta.cosmos.so/f7fcb95d-981b-4cb3-897f-e35f6c20e830?format=jpeg"
-//         alt="Event cover"
-//         className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
-//       />
-//       <CardHeader>
-//         <CardAction>
-//           <Badge variant="secondary">Featured</Badge>
-//         </CardAction>
-//         <CardTitle>Design systems meetup</CardTitle>
-//         <CardDescription>
-//           A practical talk on component APIs, accessibility, and shipping
-//           faster.
-//         </CardDescription>
-
-//         <FieldLabel>
-//           <Field orientation="horizontal">
-//             <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
-//             <FieldContent>
-//               <FieldTitle>Enable notifications</FieldTitle>
-//             </FieldContent>
-//           </Field>
-//         </FieldLabel>
-//         <br></br>
-
-//         <RadioGroupChoiceCard />
-
-//       </CardHeader>
-//       <CardFooter>
-//         <Button className="w-full">View Event</Button>
-//       </CardFooter>
-//     </Card>
-//   )
-// }
-
-
-export function RadioGroupChoiceCard() {
-  return (
-    <RadioGroup defaultValue="plus" className="max-w-sm">
-      <FieldLabel htmlFor="plus-plan">
-        <Field orientation="horizontal">
-          <FieldContent>
-            <FieldTitle>Plus</FieldTitle>
-            <FieldDescription>
-              For individuals and small teams.
-            </FieldDescription>
-          </FieldContent>
-          <RadioGroupItem value="plus" id="plus-plan" />
-        </Field>
-      </FieldLabel>
-      <FieldLabel htmlFor="pro-plan">
-        <Field orientation="horizontal">
-          <FieldContent>
-            <FieldTitle>Pro</FieldTitle>
-            <FieldDescription>For growing businesses.</FieldDescription>
-          </FieldContent>
-          <RadioGroupItem value="pro" id="pro-plan" />
-        </Field>
-      </FieldLabel>
-      <FieldLabel htmlFor="enterprise-plan">
-        <Field orientation="horizontal">
-          <FieldContent>
-            <FieldTitle>Enterprise</FieldTitle>
-            <FieldDescription>
-              For large teams and enterprises.
-            </FieldDescription>
-          </FieldContent>
-          <RadioGroupItem value="enterprise" id="enterprise-plan" />
-        </Field>
-      </FieldLabel>
-    </RadioGroup>
-  )
-}
-
-
-
 
 // function App() {
 //   const features = [
