@@ -44,7 +44,7 @@ export function QuizQuestion() {
             <span>5 min read</span>
           </div>
           <CardTitle className="text-xl font-semibold">
-            ケンタウロスで韻を踏んでいるのは？
+            攻殻機動隊で韻を踏んでいるのは？
           </CardTitle>
           {/* <CardDescription className="line-clamp-2">
             AI is changing the world and will continue to do so in the future.
@@ -63,6 +63,7 @@ export function QuizQuestion() {
   )
 }
 
+
 function QuizQuestionChoiceCheckbox() {
   return (
     <div className="flex flex-col gap-2">
@@ -70,7 +71,7 @@ function QuizQuestionChoiceCheckbox() {
         <Field orientation="horizontal">
           <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
           <FieldContent>
-            <FieldTitle>天才でなく</FieldTitle>
+            <FieldTitle>どうなる問題</FieldTitle>
           </FieldContent>
         </Field>
       </FieldLabel>
@@ -78,7 +79,7 @@ function QuizQuestionChoiceCheckbox() {
         <Field orientation="horizontal">
           <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
           <FieldContent>
-            <FieldTitle>けんけんぱです</FieldTitle>
+            <FieldTitle>ほうばりたい</FieldTitle>
           </FieldContent>
           </Field>
       </FieldLabel>
@@ -86,7 +87,7 @@ function QuizQuestionChoiceCheckbox() {
         <Field orientation="horizontal">
           <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
           <FieldContent>
-            <FieldTitle>三角です</FieldTitle>
+            <FieldTitle>正直に生きて行きたい</FieldTitle>
           </FieldContent>
           </Field>
       </FieldLabel>
@@ -94,13 +95,53 @@ function QuizQuestionChoiceCheckbox() {
         <Field orientation="horizontal">
           <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
           <FieldContent>
-            <FieldTitle>ペーペーです</FieldTitle>
+            <FieldTitle>脳内で考えて、オーライ</FieldTitle>
           </FieldContent>
           </Field>
       </FieldLabel>
     </div>
   )
 }
+
+
+// function QuizQuestionChoiceCheckbox() {
+//   return (
+//     <div className="flex flex-col gap-2">
+//       <FieldLabel>
+//         <Field orientation="horizontal">
+//           <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+//           <FieldContent>
+//             <FieldTitle>天才でなく</FieldTitle>
+//           </FieldContent>
+//         </Field>
+//       </FieldLabel>
+//       <FieldLabel>
+//         <Field orientation="horizontal">
+//           <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+//           <FieldContent>
+//             <FieldTitle>けんけんぱです</FieldTitle>
+//           </FieldContent>
+//           </Field>
+//       </FieldLabel>
+//       <FieldLabel>
+//         <Field orientation="horizontal">
+//           <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+//           <FieldContent>
+//             <FieldTitle>三角です</FieldTitle>
+//           </FieldContent>
+//           </Field>
+//       </FieldLabel>
+//       <FieldLabel>
+//         <Field orientation="horizontal">
+//           <Checkbox id="toggle-checkbox-2" name="toggle-checkbox-2" />
+//           <FieldContent>
+//             <FieldTitle>ペーペーです</FieldTitle>
+//           </FieldContent>
+//           </Field>
+//       </FieldLabel>
+//     </div>
+//   )
+// }
 
 
 
