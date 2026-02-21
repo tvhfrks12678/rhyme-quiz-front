@@ -5,6 +5,15 @@
 
 Welcome to your new TanStack app! 
 
+# 技術
+- 言語: TypeScript
+- フレームワーク: Tanstack Start(React)
+- デザイン: Shadcn
+- インフラ: Cloudflare
+
+# URL
+[TanStack Start Starter](https://rhyme-quiz.tvhfrks12678.workers.dev/)
+
 # Getting Started
 
 To run this application:
