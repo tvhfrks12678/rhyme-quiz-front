@@ -1,14 +1,15 @@
 # 概要
 - 音楽のラップの韻のクイズサイト
+- クイズ表示のみ作成
 
-<img width="588" height="794" alt="スクリーンショット 2026-02-21 13 54 49" src="https://github.com/user-attachments/assets/a395e95c-e287-4d84-9472-a55f5a351e97" />
-
-Welcome to your new TanStack app! 
+<img width="400" height="794" alt="スクリーンショット 2026-02-21 13 54 49" src="https://github.com/user-attachments/assets/a395e95c-e287-4d84-9472-a55f5a351e97" />
 
 # 技術
 - 言語: TypeScript
 - フレームワーク: Tanstack Start(React)
 - デザイン: Shadcn
+
+Welcome to your new TanStack app! 
 
 # Getting Started
 
