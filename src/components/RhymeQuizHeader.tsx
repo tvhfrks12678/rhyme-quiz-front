@@ -1,5 +1,4 @@
 import { ComicText } from "@/components/ui/comic-text"
-import { GradientHeading } from "@/components/ui/gradient-heading"
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 
 
@@ -10,16 +9,6 @@ export default function RhymeQuizHeader() {
       <AnimatedThemeToggler
         className="absolute right-4 flex h-16 w-16 items-center justify-center rounded-full border-4 border-black bg-yellow-300 text-black shadow-[4px_4px_0px_#000] transition-transform hover:scale-105 [&_svg]:h-10 [&_svg]:w-10"
       />
-      {/* <GradientHeadingExample /> */}
     </header>
   );
-}
-
-
-function GradientHeadingExample() {
-  return (
-    <GradientHeading variant="default" size="xs" weight="bold">
-      Rhyme Quiz
-    </GradientHeading>
-  )
 }
