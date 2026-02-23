@@ -15,8 +15,7 @@ import { Highlighter } from "@/components/ui/highlighter"
 export default function QuizQuestionCard() {
     return (
         <div>
-            <h1>QuizQuestionCard</h1>
-            <HighlighterDemo />
+            {/* <HighlighterDemo /> */}
             <br></br>
             <QuizQuestion />
             <br></br>
